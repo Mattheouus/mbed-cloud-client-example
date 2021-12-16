@@ -37,7 +37,7 @@
             "mbed-mesh-api.wisun-regulatory-domain"     : "3",
             "mbed-mesh-api.wisun-operating-class"       : "2",
             "mbed-mesh-api.wisun-operating-mode"        : "3",
-            "mbed-mesh-api.wisun-network-name"          : "\"Wi-SUN Network\"",
+            "mbed-mesh-api.wisun-network-name"          : "\"Wi-SUN Montpellier\"",
             "mbed-mesh-api.wisun-device-type"           : "MESH_DEVICE_TYPE_WISUN_ROUTER",
             "mbed-mesh-api.wisun-network-size"          : "NETWORK_SIZE_SMALL",
             "mbed-mesh-api.6lowpan-nd-panid-filter"     : "0xFFFF",
@@ -80,6 +80,18 @@
         },
         "NUCLEO_F429ZI_AGGRESSIVE": {
             "target.macros_add"                         : ["PAL_DEFAULT_STAGGER_ESTIMATE=1", "MBED_CLOUD_CLIENT_MULTICAST_SMALL_NETWORK"]
+        },
+        "DISCO_F769NI": {
+            "client_app.mbedtls-user-config-file" : "\"configs/wisun_mbedTLSConfig_mbedOS.h\"",
+            "target.network-default-interface-type" : "MESH",
+            "target.extra_labels_add" : ["BL_INTERNAL_FLASH"],
+            "target.header_offset" : "0x8000",
+            "target.app_offset" : "0x8200",
+            "target.restrict_size" : "0xF7E00",
+            "target.flash_dual_bank" : 1,
+            "s2lp.provide-default" : true,
+            "bootloader-size" : "0x8000",
+            "mbed-mesh-api.heap-size" : "(310*1024)"
         },
         "MIMXRT1050_EVK": {
             "client_app.mbedtls-user-config-file"       : "\"configs/wisun_mbedTLSConfig_mbedOS.h\"",

@@ -1,0 +1,4 @@
+certificate: .manifest-dev-tool/dev.cert.der
+class-id: 50c0d65183464d03b5a6c29b88d15179
+key_file: .manifest-dev-tool/dev.key.pem
+vendor-id: ca59e713b542442e9b33e15d7e7b978e
